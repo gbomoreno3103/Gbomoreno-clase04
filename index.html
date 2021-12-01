@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>¡Hola variables!</title>
+    </head>
+    <body>
+        <h1>Construyamos algunas cosas a continuación, con:</h1>
+        <ul></ul>
+        <p id="favoritismo">Yo prefiero a</p>
+        <script>
+            var e = ["Marge Simpson", "Homer Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson"];
+            var f = {
+                mom: "Luann Van Houten",
+                dad: "Kirk Van Houten",
+                child: "Milhouse Van Houten",
+            };
+            var g = {
+                mom: "Marge Simpson",
+                dad: "Homer Simpson",
+                children: ["Bart Simpson", "Lisa Simpson", "Maggie Simpson"],
+            };
+            var h = [
+                {
+                    mom: "Luann",
+                    dad: "Kirk",
+                    children: ["Milhouse"],
+                },
+                {
+                    mom: "Marge",
+                    dad: "Homer",
+                    children: ["Bart", "Lisa", "Maggie"],
+                },
+                {
+                    mom: "Manjula",
+                    dad: "Apu",
+                    children: ["Poonam", "Sashi", "Pria", "Uma", "Anoop", "Sandeep", "Nabendu", "Gheet"],
+                },
+            ];
+            e.forEach((item) => {
+                document.querySelectorAll("ul")[0].innerHTML += "<li>" + item + "</li>";
+            });
+            document.querySelector("#favoritismo").insertAdjacentHTML("beforeend", g.children[1]);
+        </script>
+    </body>
+</html>
